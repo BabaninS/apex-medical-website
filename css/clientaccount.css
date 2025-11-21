@@ -499,3 +499,44 @@ h2 {
 .btn-save-data:hover {
     background-color: #0056b3;
 }
+
+
+
+
+/* ================================================= */
+/* СТИЛИ ДЛЯ ИНДИКАТОРА ЗАГРУЗКИ (СПИННЕР) */
+/* ================================================= */
+
+/* Контейнер для выравнивания и текста */
+.loading-indicator-wrapper {
+    text-align: center;
+    padding: 30px;
+}
+
+.loading-indicator-wrapper p {
+    font-size: 16px;
+    color: var(--color-text-gray);
+    font-weight: 500;
+}
+
+/* Стили самого спиннера (вращающийся круг) */
+.spinner {
+    border: 5px solid #f0f0f0; /* Светло-серый фон круга */
+    border-top: 5px solid var(--color-blue); /* Активный синий цвет для верхней границы */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    /* Анимация: имя, длительность, тип, повторение */
+    animation: spin 1s linear infinite; 
+    margin: 0 auto 15px; /* Центрируем и добавляем отступ снизу */
+}
+
+/* Определение анимации вращения */
+@keyframes spin {
+    0% { 
+        transform: rotate(0deg); 
+    }
+    100% { 
+        transform: rotate(360deg); 
+    }
+}
