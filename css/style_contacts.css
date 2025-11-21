@@ -1,0 +1,246 @@
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+/* ================================================= */
+/* Стили для верхней части страниц (section_top) */
+/* ================================================= */
+.section_top {
+    margin-top: 80px;
+    /* ! это смещение вниз нужно, чтобы страница скользила под HAEDER */
+}
+
+.section_top h1 {
+    color: var(--color-black);
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 15px;
+}
+
+.section_top_title_text {
+    font-size: 21px;
+    text-align: center;
+    font-weight: 700
+}
+
+
+/* ================================================= */
+/* 1. СТИЛИ КОНТАКТНОЙ ИНФОРМАЦИИ (contact_info) */
+/* ================================================= */
+
+.contact_info {
+    /* Удален дубликат. Оставлен актуальный блок */
+    padding-left: 0; 
+    text-align: left;
+    padding: 20px;
+    color: var(--color-black);
+}
+
+.email, .phone, .address {
+    /* Стили для иконок/текста */
+    color: var(--color-black);
+    font-size: 21px;
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+/* для номера телефона экстренной службы */
+
+
+.emergency-phone {
+    display: block; /* Сделать элементом блочного уровня, чтобы он занимал всю ширину */
+    text-align: center;
+    font-size: 25px; /* увеличить, чтобы выделить */
+    font-weight: 800;
+    color: var(--color-blue); /* для акцента -cиний цвет */
+    margin-top: 11px;
+}
+
+
+.email {
+    /* Переопределение цвета для email */
+    color: var(--color-blue);
+}
+
+.email-footer {
+    font-size: 16px;
+    color: var(--color-blue);
+}
+
+/* 2. СТИЛИ РАСПИСАНИЯ И ЧАСОВ (section_hours) */
+.section_hours {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+.section_hours h2 {
+    font-size: 24px;
+    color: var(--color-black);
+    margin-bottom: 15px;
+}
+.hours-grid {
+    display: flex;
+    flex-direction: column;
+}
+.hours-grid ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.hours-grid li {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.emergency {
+    border-left: 3px solid var(--color-golden-rod);
+    padding-left: 15px;
+    margin-top: 16px;
+}
+.emergency p {
+    margin: 5px 0;
+}
+
+
+/* ================================================= */
+/* 3. СТИЛИ для КАРТЫ - (section_map) */
+/* ================================================= */
+.section_map {
+    display: grid;
+    justify-content: center;
+}
+.section_map > .map-container {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    max-width: 900px;
+    height: 450px;
+    border: 2px solid var(--color-blue);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.map_info {
+    font-size: 20px;
+    margin-top: 0px;
+    text-align: left;
+}
+
+
+/* ================================================= */
+/* 4. СТИЛИ СЕТКИ (grid) */
+/* ================================================= */
+.grid {
+    display: grid;
+    max-width: 1200px; 
+    margin: 40px auto 0 auto; 
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    align-items: flex-start;
+}
+
+
+/* ================================================= */
+/* 5. СТИЛИ КОНТАКТНОЙ ФОРМЫ (section_form) */
+/* ================================================= */
+
+.section_form {
+    /* Удален дубликат. Оставлен актуальный блок */
+    margin: 60px auto 80px auto; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    max-width: 600px; 
+    padding: 20px;
+}
+
+.section_form h2 {
+    font-size: 28px;
+    color: var(--color-black);
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+    background-color: #f8f8f8; 
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    font-size: 18px;
+    color: var(--color-black);
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #0080ff;
+    box-shadow: 0 0 5px rgba(0, 128, 255, 0.5);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+
+.contact-form {
+    margin-top: 22px;
+    align-self: stretch;
+    padding: 9px 35px;
+    font-size: 18px;
+}
+
+
+.btn_common-blue{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background-color: var(--color-btn_blue);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 10px 28px;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.btn_common-blue:hover {
+    transform: translateY(-2px); /*сдвинуть кнопку вверх*/
+    background-color: var(--color-btn_blue-hover);
+}
+
+
+
+/* --- ИЗ СОНОВНОЙ СТРАНИЦЫ index.html --- */
+.blue_bold {
+    color: var(--color-blue);
+    font-weight: 900;
+}

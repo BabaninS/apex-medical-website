@@ -1,0 +1,56 @@
+:root{
+    --color-bg: #cce2f7;
+    --color-site-bg: #cce2f7;
+
+    --color-blue: #0070ff;
+    --color-green: #28a745;
+    --color-golden-rod: #b8860B;
+    --color-white: whitesmoke;
+    --color-black: #333; /* #1f2933 - как вариант */
+    --color-menu-a: #333;
+    --color-btn_blue: #0d80fa;
+    --color-btn_blue-hover: #1f9ffd;
+
+    --font-sz-base: 16px;    
+}
+
+/* РАЗМЕРЫ */
+.sz12 {
+font-size: 12px;
+font-weight: 700;
+}
+.sz14 {
+font-size: 14px;
+font-weight: 700;
+}
+.sz16 {
+font-size: 16px;
+font-weight: 700;
+}
+.sz18 {
+font-size: 18px;
+font-weight: 700;
+}
+.sz20 {
+font-size: 20px;
+font-weight: 700;
+}
+.sz22 {
+font-size: 22px;
+font-weight: 700;
+}
+.sz24 {
+font-size: 24px;
+font-weight: 700;
+}
+
+/* ЦВЕТА */
+.clwhite {
+    color: lightgray;
+}
+.clblue {
+    color: #0080ff;
+}
+.clGoldenRod {
+    color: #b8860B;
+}

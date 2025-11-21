@@ -1,0 +1,225 @@
+/* @media screen and (max-width: 1000px) {
+    :root {
+        --font-sz-base: 12px;
+    }
+}    */
+/* ================================ */
+
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+
+    overflow: hidden;
+    margin: 0 auto; /*добавил 08.11 - посмотреть, не мешает: */
+    background: rgba(0,128,255,0.17);
+}
+.header {
+    background-color:   var(--color-bg);
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+    display: flex;
+    flex-direction: column;
+    /* border-bottom: 3px double var(--color-golden-rod); */
+
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+.container {
+    max-width: 700%; /* размер содержимого сайта по отношению к экрану' */
+    /* padding: 0 15px;
+    margin: 0px auto;
+    background-color: var(--color-site-bg); */
+}
+
+.header_top-inner {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 3px double var(--color-golden-rod);
+}
+
+.header-logo {
+    margin: 15px;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/* .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.6;
+    color: var(--color-black);
+    text-decoration: none;
+} */
+
+
+
+/* Этот стиль, кажется, не работает */
+.logo{
+    width: 60px;
+}
+
+
+.header_logo-text {
+    display: flow;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.logo-title {
+    color: #006bff;
+}
+
+.header_user {
+    display: flex;
+    /* gap: 8px; */
+    white-space: nowrap;
+    margin:20px;
+    align-items: center;
+}
+.header_user-avatar {
+    aspect-ratio: 1/1;
+}
+
+.header_user-avatar-container {
+    height: 20%;
+}
+
+
+
+/* -----------------
+СТИЛИ МЕНЮ
+----------------- */
+.menu a {
+    color: var(--color-menu-a);
+    font-size: calc(var(--font-sz-base) + 7px);
+    font-size-adjust: none;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 5px;
+}
+.menu a:hover, .menu a.active {
+   color: #dfa52b;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #ebb217;
+}
+
+
+/* ------------------------------
+СТИЛИ FOOTER
+------------------------------ */
+.footer {
+   background-color: transparent;
+   color: var(--color-black);
+   margin-top: 10px;
+   padding: 3px 15px;
+   height: auto;
+   border-top: 3px double var(--color-golden-rod);
+
+}
+.footer-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 4fr);
+    gap: 40px;
+    margin: 5px auto;
+    font-size: 16px;
+}
+.footer-logo {
+    display: inline;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+.footer-logo-image {
+    width: 10px;
+    /* height: 10px; */
+    /* object-fit: contain; */
+}
+
+.footer h4 {
+    font-size: 16px;
+    color: var(-- color-black);
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.footer_links a {
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: normal;
+    cursor: pointer;
+}
+.footer_links a:hover {
+        color: var(--color-golden-rod);
+        font-size: 16px;
+        font-weight: bolder;
+        text-decoration: underline;
+}
+.footer_subtitle {
+    font-size: 16px;
+    color: var(--color-black);
+    font-weight: 700;
+}
+
+.footer .green_bold {
+    color: #16a249;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+
+
+.copyright {
+    margin-top: 10px;
+    text-align: center;
+    border-top: 3px solid silver;
+    padding-top: 7px;
+}
+
+
+
+ /* убрать меня после настроки с сервером! */
+.testbtn {
+    font-weight: bold;
+    font-size: 14px;
+    color: red;
+    margin: 0; 
+    
+    display: block;   
+    text-align: center;
+}
+
+
+
+
+/* VOID
+.header_nav {
+    margin: 20px;
+    padding: 0;
+}
+
+.header_nav-list
+    display: flex;
+    gap: 70px;
+    margin: 0;
+    padding: 0;
+} 
+
+.header_subtitle {
+    text-align: center;
+    font-size: 20px; 
+    color: #555555; 
+    margin: 5px 0; 
+}
+*/

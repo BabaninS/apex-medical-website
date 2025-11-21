@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='images/favicon.png' rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" href="css/vars.css">
+  <link rel="stylesheet" href="css/style_frmlogin.css">
+  <title>Povolení</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container_scale">
+        <h1>
+          APEX Medical <br>
+          Přihlaste se ke svému osobnímu účtu
+        </h1>
+
+      <div class="section_top d-flex"> 
+        <div class="left_side">
+          <div class="container_header_btns sz16">
+            <a href="index.html" class="btn_common-blue">Domu</a>
+          </div>
+
+          <div class="header_title" >
+              Přihlaste se ke svému účtu
+          </div>
+
+          <div class="txt">
+          Pro přístup ke svým datům, personalizovaným službám nebo informacím o produktech
+          se prosím přihlaste.
+          </div>
+        </div> <!--left_side-->
+
+
+      
+        <div class="right_side">
+          <div class= "login-wrap">
+            <div class="frmCommon">
+              <div class="login-form">
+
+                <!-- ФОРМА  LOGIN-->
+                <form name="login" method="post" action="authenticate" onsubmit="return validateUser()">
+
+                  <div class="group">
+                    <label for="username" class="label">Uživatelské jméno</label>
+                    <input id="username" type="text" name="username" class="input">
+                  </div>
+
+                  <div class="group">
+                    <label for="password" class= "label">Heslo</label>
+                    <input type="password" id="password" name="password" placeholder="*******" class="input">
+                  </div>
+
+                  <div class="group">
+                    <input type="checkbox" id="check" name="remember_me" class="check" checked>
+                    <label for="check"><span class="icon"></span>Zapamatuj si mě</label>
+                  </div>
+
+                  <div class="group"> 
+                    <input type="submit" class="button" value="Log in">
+                  </div>
+                  
+                  <hr>
+
+                  <div class="foot-link">
+                    <a href="frmPwdRecover.html">Zapomněli jste heslo?</a>
+                    <br>
+                    <a href="frmRegistration.html">Žádný profil? Zaregistrujte se.</a>
+                  </div> 
+                </form>
+                <!-- КОНЕЦ ФОРМЫ  -->
+
+              </div>  <!--login-form-->
+            </div> <!--frmCommon-->
+          </div> <!--login-wrap-->
+        </div> <!--right_side-->
+          
+
+      </div> <!--section_top d-flex-->
+    </div>  <!--container_scale-->
+
+  </div> <!--WRAPPER-->
+
+  
+  <!-- Подключение внешнего файла script.js -->
+  <script src="js/script_frmLogin.js"></script>
+
+</body>
+</html>

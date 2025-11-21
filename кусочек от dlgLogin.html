@@ -1,0 +1,88 @@
+<!-- ======================================================== -->
+              <!-- Всплывающее окно ВХОДА по щелчку мыши по кнопке [Log in] -->
+              <!-- КНОПКА -->
+                <button class="header_user-btn" onclick="dlgLogin.showModal()">Log in</button>
+                
+                <!-- ДИАЛОГ dlgLogin -->
+                <dialog class="frmCommon" id="dlgLogin">
+                  <form class="login-form" action="" method="POST">
+                    <h2> Log In APEX osobní účet uživatele</h2>
+                    <div class="login-form">
+                      <div class="group">
+                        <label for="signin-user" class= "label"> Username</label>
+                        <input id="signin-user" type="input" class="input" placeholder="Enter Username" required>
+                      </div>
+                      <div class="group">
+                        <label for="signin-pass" class= "label"> Password</label>
+                        <input id="signin-pass" type="password" class="input" data-type="password" placeholder="*******" required>
+                      </div>
+                      <div class="group">
+                        <input type="checkbox" id="check" class="check" checked>
+                        <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                      </div>
+                      <div class="group"> 
+                        <input type="submit" class="button" value="Log in">
+                      </div>
+
+                      <div class="hr"></div>
+
+
+                      <!-- ссылка "FORGOT PASSWORD" ---------------------------- -->
+                      <!-- По ссылке -> открыть всплывающее окно dlgForgotPassword  -->
+                      <div class="foot-link">
+                        <!-- ССЫЛКА -->
+                        <!-- <a href="ForgotPasswordForm.html" target="_top">Forgot Password?</a>  -->
+
+                        <a onclick="dlgForgotPassword.showModal()">Forgot Password?</a>
+                        <!-- ДИАЛОГ dlgForgotPassword -->
+                        <dialog class="frmCommon" id="dlgForgotPassword">
+                          <form onload="close_dlgLogin()" action="" method="post" ">
+                            <div class= "forgot_login-wrap">
+                              <div class= "login-html">
+                                <h1> Forgot Password?</h1>
+                                <div class="text">
+                                  <p>Zadejte uživatelské jméno a e-mailovou adresu, kterou jste použili při registraci, 
+                                    a my vám na vámi uvedenou adresu zašleme nové heslo.
+                                  </p>
+                                </div>
+                              </div>
+                                  
+                              <div class="login-form">
+                                <div class="group">
+                                  <label for="signin-user" class= "label"> Username</label>
+                                  <input id="signin-user" type="input" class="input">
+                                </div>
+                                <div class="group">
+                                  <label for="signup-email" class="label"> Email address </label>
+                                  <input id="signup-email" type="email" class="input" data-type="password">
+                                </div>
+                                <div class="group"> 
+                                  <input type="submit" class="button" value="Send">
+                                </div>
+                                <div class="group"> 
+                                <button type="button" onclick="close_dlgForgotPassword()">Закрыть</button>
+                                </div>
+                            </div> - forgot_login-wrap
+                          </form>
+                        </dialog> 
+
+                      </div> <!-- foot-link-->
+
+                                        <!-- кнопка ЗАКРЫТЬ диалог LOG IN   
+                                         !!! ЗАКРЫВАЕТ, НО ПОТОМ НЕ ОТКРЫВАЕТСЯ !-->
+                                        <!-- <div class="group"> 
+                                        <button type="button" onclick="close_dlgLogin()">Закрыть</button>
+                                        </div> -->
+
+                    </div>  <!-- login-form -->
+                  </form>
+                </dialog> <!-- class="frmCommon" id="dlgLogin" -->
+                <!-- END ОКНО ДИАЛОГА id="dlgLogin" -->
+
+
+                
+
+                <p>/</p> 
+                <!--  -->
+                <!-- <a class="header_user-btn" onclick="dlgLogin.showModal()">Log in</a> -->
+              </div>
