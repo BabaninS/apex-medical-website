@@ -19,11 +19,11 @@
         <div class="container">
           <div class="header_top-inner">
             <a class="header-logo" href="index.html">
-              <div><img class="logo" src="images/hospital.png" alt="logo">
+              <div><img class="logo" src="images/logo.png" alt="logo">
               </div> 
               <div class="header_logo-text">
-                <span class="logo-title">APEX</span>
-                <span class="logo-title">Medical</span>
+                <div class="logo-title sz20">APEX</div>
+                <div class="logo-title sz16">Medical</div>
               </div>
             </a>
 
@@ -184,7 +184,7 @@
                </div>
             </div> <!-- 2-ой ряд ГАЛЕРЕИ ВРАЧЕЙ -->
 
-         </div> <!-- ГАЛЕРЕЯ ВРАЧЕЙ - content_list_grid  -->
+         </div> <!-- ГАЛЕРЕЯ ВРАЧЕЙ (content_list_grid)  -->
          
          <!-- КНОПКА "показать больше врачей" -->
          <div class="show-more-button-container">
@@ -192,7 +192,7 @@
                Zobrazit více lékařů <span class="arrow-icon">▼</span>
             </button>
          </div>
-         <!-- КНОПКА "показать больше врачей" -->
+         <!-- КНОПКА "показать больше врачей" -->         
 
 
             <!-- FOOTER -->
@@ -247,7 +247,7 @@
    <div class="copyright sz12">&copy; 2024 APEX Medical Center. Všechna práva vyhrazena.</div>
 
 
-  <!-- Подключение файла script.js -->
-  <script src="js/script_Lekari.js"></script>
+  <!-- Подключение внешнего файла script.js -->
+  <!-- <script src="js/script.js"></script> -->
 </body> 
 </html>
