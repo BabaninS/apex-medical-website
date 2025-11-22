@@ -32,36 +32,27 @@ html, body {
 /* ================================================= */
 
 .contact_info {
-    /* Удален дубликат. Оставлен актуальный блок */
-    padding-left: 0; 
     text-align: left;
     padding: 20px;
     color: var(--color-black);
 }
+.contact_info div {
+    margin-bottom: 10px;
+}
+
+.contact_info img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
 
 .email, .phone, .address {
-    /* Стили для иконок/текста */
     color: var(--color-black);
     font-size: 21px;
     margin-top: 5px;
     font-weight: 700;
 }
 
-/* для номера телефона экстренной службы */
-
-
-.emergency-phone {
-    display: block; /* Сделать элементом блочного уровня, чтобы он занимал всю ширину */
-    text-align: center;
-    font-size: 25px; /* увеличить, чтобы выделить */
-    font-weight: 800;
-    color: var(--color-blue); /* для акцента -cиний цвет */
-    margin-top: 11px;
-}
-
-
-.email {
-    /* Переопределение цвета для email */
+.email {  /* Переопределение цвета для email */
     color: var(--color-blue);
 }
 
@@ -69,6 +60,17 @@ html, body {
     font-size: 16px;
     color: var(--color-blue);
 }
+
+/* для номера телефона экстренной службы */
+.emergency-phone {
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--color-red);
+    margin-top: 5px;
+}
+
 
 /* 2. СТИЛИ РАСПИСАНИЯ И ЧАСОВ (section_hours) */
 .section_hours {
@@ -79,7 +81,7 @@ html, body {
 .section_hours h2 {
     font-size: 24px;
     color: var(--color-black);
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 .hours-grid {
     display: flex;
@@ -105,62 +107,76 @@ html, body {
 }
 
 
+
 /* ================================================= */
 /* 3. СТИЛИ для КАРТЫ - (section_map) */
 /* ================================================= */
 .section_map {
-    display: grid;
     justify-content: center;
+    padding: 5px;
 }
-.section_map > .map-container {
-    display: flex;
-    justify-content: center;
-    width: 900px;
-    max-width: 900px;
+#map-container {
+    width: 100%; /* Занимает всю доступную ширину родителя */
+    max-width: 900px; /* Ограничиваем максимальную ширину */
     height: 450px;
     border: 2px solid var(--color-blue);
     border-radius: 10px;
     overflow: hidden;
+    margin: 0 auto; /* Центрируем контейнер */
+}
+
+/* Убеждаемся, что iframe занимает всю область контейнера */
+#map-container iframe {
+    width: 100%;
+    height: 100%;
+    display: block; /* Убираем возможные артефакты */
 }
 
 .map_info {
     font-size: 20px;
-    margin-top: 0px;
     text-align: left;
+    max-width: 900px;
+    margin: 5px auto 0 auto;
 }
-
+.map_info p {
+    margin: 3px;
+    font-size: 16px;
+}
 
 /* ================================================= */
 /* 4. СТИЛИ СЕТКИ (grid) */
 /* ================================================= */
 .grid {
     display: grid;
-    max-width: 1200px; 
-    margin: 40px auto 0 auto; 
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    max-width: 1200px;
+    margin: 0px auto 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 20px;
     align-items: flex-start;
+    padding: 0 20px;
 }
 
 
+
+
+
 /* ================================================= */
-/* 5. СТИЛИ КОНТАКТНОЙ ФОРМЫ (section_form) */
+/* 5. СТИЛИ КОНТАКТНОЙ ФОРМЫ (contact_form) */
 /* ================================================= */
 
-.section_form {
-    /* Удален дубликат. Оставлен актуальный блок */
-    margin: 60px auto 80px auto; 
+.contact_form {
+    margin: 0px auto 30px auto; 
     display: flex;
     flex-direction: column; 
     align-items: center; 
-    max-width: 600px; 
-    padding: 20px;
+    max-width: 700px; /* Немного увеличим ширину формы */
+    padding: 0 20px;
 }
 
-.section_form h2 {
+.contact_form h2 {
     font-size: 28px;
     color: var(--color-black);
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .contact-form {
@@ -187,19 +203,21 @@ html, body {
 .contact-form input[type="tel"],
 .contact-form textarea {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 12px 15px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd; /* Более светлая рамка */
+    border-radius: 6px; /* Более мягкое скругление */
     box-sizing: border-box;
     font-size: 16px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* УНИФИКАЦИЯ ФОКУСА (как в личном кабинете) */
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #0080ff;
-    box-shadow: 0 0 5px rgba(0, 128, 255, 0.5);
+    border-color: var(--color-blue);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Единый Box Shadow */
+    background-color: #f7f9fc; /* Легкий фон */
     outline: none;
 }
 
@@ -207,40 +225,29 @@ html, body {
     resize: vertical;
 }
 
-
-.contact-form {
-    margin-top: 22px;
-    align-self: stretch;
-    padding: 9px 35px;
+/* Стилизация кнопки */
+.contact-form .btn_common-blue {
+    margin: 25px 0 0 0; 
+    align-self: flex-start; /* Прижать к левому краю формы */
     font-size: 18px;
-}
-
-
-.btn_common-blue{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    background-color: var(--color-btn_blue);
-    color: #fff;
-    text-decoration: none;
     font-weight: 700;
-    padding: 10px 28px;
-    border: 1px solid lightgray;
-    border-radius: 7px;
-    cursor: pointer;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    padding: 12px 30px;
+    border-radius: 8px; /* Единый border-radius */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Единый shadow */
     transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
-.btn_common-blue:hover {
-    transform: translateY(-2px); /*сдвинуть кнопку вверх*/
-    background-color: var(--color-btn_blue-hover);
-}
 
-
-
-/* --- ИЗ СОНОВНОЙ СТРАНИЦЫ index.html --- */
+/* --- ВТОРОСТЕПЕННЫЕ СТИЛИ --- */
 .blue_bold {
     color: var(--color-blue);
+    font-weight: 900;
+}
+
+.green_bold {
+    color: var(--color-green);
+    font-weight: 900;
+}
+.red_bold {
+    color: var(--color-red);
     font-weight: 900;
 }
