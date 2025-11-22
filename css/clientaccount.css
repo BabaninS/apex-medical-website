@@ -386,8 +386,10 @@ h2 {
 /* Стиль при фокусе (Focus State) */
 .input-data:focus {
     border-color: var(--color-blue);
-    outline: none;
+    
+    outline: none; /* убираю стандартный outline и ниже заменяю его на box-shadow*/
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+
     background-color: #f7f9fc; /* Легкий фон при фокусе, как в Admin Panel */
 }
 
