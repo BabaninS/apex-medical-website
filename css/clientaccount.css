@@ -221,7 +221,7 @@ h2 {
     max-width: 500px;
     min-height: 282px;
     position: relative;
-    background-color: burlywood;
+    background-color: мфк(--сolor-white);
     /* background: url('images/bg-login-form.jpg') no-repeat center; */
     background-size: cover;
     border-radius: 10px;
@@ -232,100 +232,8 @@ h2 {
 .login-form .group{
     margin-bottom: 12px;
 }
-.login-form .group .label {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--color-black);
-    text-align: left;
-    margin: 20px 0px 2px 4px;
-    display: block;
-    width: 100%;
-}
 
-.login-form .group .input, .login-form .group .button{
-    width: 95%;
-    color: whitesmoke;
-    padding: 10px;
-    border: 1px solid var(--color-site-black);
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    outline: none;
-}
-.login-form .group .input:focus{
-    /* background: rgba(177, 200, 233, 0.7); */
-    /* box-shadow: 0 0 9px var(--color-golden-rod); */
-    color: black;
-}
 
-.login-form .group .button{
-    background: var(--color-golden-rod);
-    cursor: pointer;
-    font-weight: 700;
-    margin-top: 30px;
-    width: 100%;
-
-}
-.login-form .group .button:hover{
-    background: #c49b63;
-}
-
-.login-form .group .check {
-    display: none;
-    font-size: 12px;
-    text-align: center;
-}
-
-.login-form .group label .icon{
-    width: 15px;
-    height: 15px;
-    font-weight: 500;
-    border-radius: 2px;
-    position: relative;
-    display: inline-block;
-    background: rgba(255,255,255,.1);
-    margin-right: 8px;
-    margin-top: 10px;
-}
-.login-form .group .check + label {
-    font-size: 18px;
-    color: whitesmoke;
-    justify-content: left;
-    text-align: center;
-}
-.login-form .group .check:checked + label {
-    color: whitesmoke;
-}
-.login-form .group .check:checked + label .icon{
-    background: gray;
-}
-.login-form .group label .icon:before, 
-.login-form .group label .icon:after{
-    content: '';
-    background: whitesmoke;
-    position: absolute;
-    transform: all .2s ease-in-out;
-}
-.login-form .group label .icon:before{
-    width: 5px;
-    height: 2px;
-    left: 3px;
-    top: 6px;
-    transform: scale(0) rotate(0);
-}
-.login-form .group label .icon:after{
-    width: 10px;
-    height: 2px;
-    right: 0px;
-    top: 6px;
-    transform: scale(0) rotate(0);
-}
-.login-form .group .check:checked + label .icon:before{
-    transform: scale(1) rotate(45deg);
-}
-.login-form .group .check:checked + label .icon:after{
-    transform: scale(1) rotate(-45deg);
-}
 
 
 
@@ -539,4 +447,82 @@ h2 {
     100% { 
         transform: rotate(360deg); 
     }
+}
+
+
+
+
+/* ================================================= */
+/* СТИЛИ ДЛЯ КНОПКИ LOGIN (Админ-панель) */
+/* ================================================= */
+
+/* 1. Максимально специфичный селектор для кнопки по классу .button */
+#admin-content .group .button {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 15px;
+    background-color: var(--color-blue, #007bff) !important; /* ГАРАНТИРОВАННО ПЕРЕОПРЕДЕЛЯЕМ ЦВЕТ */
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+/* 2. Эффект при наведении (Hover) */
+#admin-content .group .button:hover {
+    color: var(--color-black);
+    background-color: var(--color-blue-light) !important;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 3. Эффект при нажатии (Active) */
+#admin-content .group .button:active {
+    color: var(--color-white);
+    background-color: #0354aa !important;
+    transform: translateY(1px);
+}
+
+
+/* ================================================= */
+/* СТИЛИЗАЦИЯ ПОЛЕЙ ВВОДА (логин/пароль) */
+/* ================================================= */
+
+/* стили для надписей (Labels) */
+#admin-content .group .label {
+    font-size: 16px; 
+    font-weight: 600;
+    color: var(--color-black, #333); 
+    text-align: left;
+    margin: 15px 0 5px 0; /* Отступ сверху и снизу */
+    display: block; 
+}
+
+
+#admin-content .group .input {
+    width: 100%;
+    box-sizing: border-box; /* Важно: учитывает padding в ширине */
+    
+    padding: 12px 15px; /* Увеличенный внутренний отступ для удобства */
+    
+    background-color: var(--color-white, white);
+    color: var(--color-black, #333);
+    font-size: 16px;
+    font-weight: 500;
+    
+    border: 1px solid #ddd; /* Светлая серая рамка */
+    border-radius: 6px; 
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* Стиль при фокусе (Focus State) */
+#admin-content .group .input:focus {
+    border-color: var(--color-blue, #007bff); /* Синяя рамка при фокусе */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Легкое синее свечение */
+    background-color: #f7f9fc; 
 }
