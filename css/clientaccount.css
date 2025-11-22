@@ -339,7 +339,6 @@ h2 {
 /* ================================================= */
 /* СТИЛИ ДЛЯ РАЗДЕЛА "МОИ ДАННЫЕ" (data-content) */
 /* ================================================= */
-
 .profile-form h3 {
     text-align: left;
     color: var(--color-black);
@@ -356,31 +355,43 @@ h2 {
     margin-bottom: 15px;
 }
 
+/* 1. УНИФИКАЦИЯ: Стиль для надписей (Label) */
 .label-data {
-    font-size: 14px;
+    font-size: 16px; /* Увеличен до 16px */
     font-weight: 600;
-    color: var(--color-text-gray);
-    margin-bottom: 5px;
-    text-align: left; /* Важно для выравнивания */
+    color: var(--color-black, #333); /* Цвет текста как в Admin Panel */
+    text-align: left;
+    /* Полный отступ сверху, как в Admin Panel */
+    margin: 15px 0 5px 0; 
+    display: block; 
 }
 
+/* 2. УНИФИКАЦИЯ: Основные стили для полей ввода (Input) */
 .input-data {
     width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-    box-sizing: border-box; /* Учитываем padding и border в ширине */
+    /* Увеличенный padding для единообразия */
+    padding: 12px 15px; 
+    
+    background-color: var(--color-white, white);
     color: var(--color-black);
+    font-size: 16px;
+    box-sizing: border-box; 
+    
+    border: 1px solid #ddd; /* Более светлая рамка, как в Admin Panel */
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; 
 }
 
+/* Стиль при фокусе (Focus State) */
 .input-data:focus {
     border-color: var(--color-blue);
     outline: none;
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    background-color: #f7f9fc; /* Легкий фон при фокусе, как в Admin Panel */
 }
 
-/* Стилизация для неактивных полей (например, Имя и Дата рождения) */
+/* Стилизация для неактивных полей (без изменений) */
 .input-data[disabled] {
     background-color: #eee;
     color: #666;
@@ -390,24 +401,33 @@ h2 {
 
 .group-data-submit {
     margin-top: 30px;
-    text-align: right; /* Кнопка сохранения справа */
+    text-align: right;
 }
 
+/* 3. УНИФИКАЦИЯ: Стиль для кнопки сохранения */
 .btn-save-data {
     background-color: var(--color-blue);
     color: white;
-    padding: 10px 25px;
+    padding: 12px 25px; /* Увеличен вертикальный padding */
     border: none;
-    border-radius: 6px;
+    border-radius: 8px; /* Скругление как у кнопки Admin Panel */
     font-size: 18px;
+    font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, box-shadow 0.2s; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .btn-save-data:hover {
-    background-color: #0056b3;
+    background-color: var(--color-blue-light);
+    color: var(--color-black);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
+.btn-save-data:active {
+    background-color: #004085;
+    transform: translateY(1px);
+}
 
 
 
