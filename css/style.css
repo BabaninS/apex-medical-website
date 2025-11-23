@@ -128,11 +128,10 @@ h1 {
     flex-direction: column;
     text-align: center;
     background: #ffffff; /* Убедимся, что фон белый */
-    border-radius: 12px; /* Чуть больший радиус */
+    border-radius: 12px;
     min-height: 120px;
-    padding: 25px 20px; /* Увеличим внутренние отступы */
-    /* Мягкая, ненавязчивая тень */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
+    padding: 25px 20px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Мягкая, ненавязчивая тень */
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
@@ -141,29 +140,24 @@ h1 {
 /* ИЗМЕНЕНИЯ В .about_content-item:hover */
 .about_content-item:hover {
     transform: translateY(-3px); /* Сдвиг вверх для акцента */
-    /* Убираем желтый, делаем фон cветлым синим */
     background-color: transparent; /* Легкий синий оттенок */
     /* Более выраженная тень при наведении */
     box-shadow: 0 8px 25px rgba(0, 128, 255, 0.15);
 }
 
-
-.about_content-title {
+/* VOID ??? */
+/* .about_content-title { 
     text-align: center;
     font-size: 32px;
     margin-bottom: 20px;
     color: var(--color-black);
-}
+} */
 
 .about_content-item-title {
     margin-top: 0;
     margin-bottom: 5px;
     font-size: 22px; /* Чуть крупнее заголовок */
     color: var(--color-black);
-}
-.about_content-item-text {
-    margin: 0;
-    font-size: 16px;
 }
 .about_content-item h3 {
     margin-top: 0;
@@ -343,7 +337,6 @@ h1 {
     min-height: 555px;
     background: #1466b8;
     border: 3px solid var(--color-btn_blue);
-    /* border: 3px solid var(--color-golden-rod); не рекомендуется */
     border-radius: 15px;
     position: relative;
     box-shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);

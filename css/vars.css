@@ -3,6 +3,8 @@
     --color-site-bg: #cce2f7;
 
     --color-blue: #0070ff;
+    --color-lightblue: #a6c7f3;
+        
     --color-green: #28a745;
     --color-golden-rod: #b8860B;
     --color-white: whitesmoke;
@@ -12,7 +14,7 @@
     --color-btn_blue: #0d80fa;
     --color-btn_blue-hover: #1f9ffd;
 
-    --font-sz-base: 16px;    
+    --font-sz-base: 12px;    
 }
 
 /* РАЗМЕРЫ */

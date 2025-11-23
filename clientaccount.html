@@ -14,14 +14,14 @@
 </head>
 
 <body>
-<!-- ЗАГОЛОВОК САЙТА с МЕНЮ и КНОПКАМИ -->
+  <!-- ЗАГОЛОВОК САЙТА с МЕНЮ и КНОПКАМИ -->
   <div class="wrapper"> 
     <header class="header">
       <div class="header_top">
         <div class="container">
           <div class="header_top-inner">
             <a class="header-logo" href="index.html">
-              <div><img class="logo" src="images/logo.png" alt="logo">
+              <div><img class="company_logo" src="images/logo.png" alt="logo">
               </div> 
               <div class="header_logo-text">
                 <div class="logo-title sz20">APEX</div>
@@ -36,14 +36,20 @@
               <a href="sluzby.html">Naše služby</a> 
               <a href="about.html" >О nás</a> 
               <a href="contacts.html">Kontakty</a> 
-              <a class="visibility active" href="#" id="accountLink">Osobní účet</a> 
+              <a class="active visibility" href="#" id="clientaccount">Osobní účet</a> 
             </nav>
-            
+
+            <div id="user_avatar" class="header_btn-box"> 
+              <div class="header_user"> 
+                <a href="frmLogin.html">
+                  <img class="header_user-avatar" src="./images/avatar.png" alt="Log in">
+                </a>
+              </div>
+            </div> <!--header_btn-box-->
           </div> <!-- header_top-inner -->
         </div> <!-- container -->
       </div> <!-- header_top -->
     </header>
-
     
    <div class="PageContent">
     <div class="section_top"> 
@@ -97,14 +103,11 @@
  
 
 
-          <!-- --------------------------------------------
-           РАЗДЕЛ ИСТОРИИ ПОСЕЩЕНИЙ И БУДУЩИХ НАЗНАЧЕНИЙ] 
-           ------------------------------------------------>
+          <!-- РАЗДЕЛ ИСТОРИИ ПОСЕЩЕНИЙ И БУДУЩИХ НАЗНАЧЕНИЙ -->
           <div id="notes-content" class="info_content account-tab-content active">
               <h2>Moje poznámky</h2>
 
-              <!-- -------------------------------------------- -->
-              <!-- -------- будущие назначения приемов -------- -->
+              <!-- будущие назначения приемов -->
               <div class="appointment-card upcoming-appointment">
                   <h3>🗓️ Vaše nejbližší schůzka</h3>
                   <div class="appointment-detail">
@@ -124,8 +127,7 @@
               
               <hr>
               
-              <!-- -------------------------------------------- -->
-              <!-- --------     история приемов        -------- -->
+              <!-- ИСТОРИЯ ПРИЕМОВ -->
               <h3>📜 Historie návštěv</h3>
               <table class="visit-history-table">
                   <thead>
@@ -224,10 +226,7 @@
             </div>        
 
 
-            <!-- ------------------------ -->
             <!-- АДМИНИСТРАЦИОННАЯ ПАНЕЛЬ -->
-            <!-- ------------------------ -->
-
             <div id="admin-content" class="info_content account-tab-content">
               <h2>Administrační panel</h2>
                         <div class= "login-wrap">
