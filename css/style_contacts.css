@@ -7,6 +7,9 @@ h2 {
     font-size: 22px;
 }
 
+/* ================================================= */
+/* Стили для верхней части страницы (section_top) */
+/* ================================================= */
 .section_top {
     margin-top: 80px; /*чтобы не уезжала под Header */
 }
@@ -24,4 +27,270 @@ h2 {
     font-size: 20px;
     text-align: center;
     font-weight: 700
+}
+
+
+/* ================================================= */
+/* 1. СТИЛИ КОНТАКТНОЙ ИНФОРМАЦИИ (contact_info) */
+/* ================================================= */
+.contact_info img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.contact_info вши {
+    margin: 10px;
+}
+
+.email, .phone, .address {
+    color: var(--color-black);
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.email {  /* Переопределение цвета для email */
+    color: var(--color-blue);
+}
+
+.email-footer {
+    font-size: 16px;
+    color: var(--color-blue);
+}
+
+/* для номера телефона экстренной службы */
+.emergency-phone {
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--color-red);
+    margin-top: 5px;
+}
+
+
+/* 2. СТИЛИ РАСПИСАНИЯ И ЧАСОВ (section_hours) */
+.section_hours {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.hours-grid {
+    display: flex;
+    flex-direction: column;
+}
+.hours-grid ul {
+    list-style: none;
+    padding-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.hours-grid li {
+    font-size: 14px;
+    line-height: 1.4;
+    padding-left: 30px;
+}
+.emergency {
+    border-left: 3px solid var(--color-golden-rod);
+    padding-left: 15px;
+    margin-top: 16px;
+}
+.emergency p {
+    margin: 5px 0;
+}
+
+
+
+/* ================================================= */
+/* 3. СТИЛИ для КАРТЫ - (section_map) */
+/* ================================================= */
+.section_map {
+    justify-content: center;
+    padding: 5px;
+    text-align: center;
+}
+#map-container {
+    width: 100%; /* Занимает всю доступную ширину родителя */
+    max-width: 900px; /* Ограничиваем максимальную ширину */
+    height: 450px;
+    border: 2px solid var(--color-blue);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto; /* Центрируем контейнер */
+}
+
+/* Убеждаемся, что iframe занимает всю область контейнера */
+#map-container iframe {
+    width: 100%;
+    height: 100%;
+    display: block; /* Убираем возможные артефакты */
+}
+
+.map_info {
+    font-size: 20px;
+    text-align: left;
+    max-width: 900px;
+    margin: 5px auto 0 auto;
+}
+.map_info p {
+    margin: 3px;
+    font-size: 16px;
+}
+
+
+/* ================================================= */
+/* 4. СТИЛИ СЕТКИ (grid) - ОПТИМИЗИРОВАННЫЙ */
+/* ================================================= */
+.grid {
+    display: grid;
+    max-width: 1200px;
+    margin: 40px auto; /* Центрирование контейнера */
+    
+    /* Определяем 2 колонки */
+    grid-template-columns: 3fr 2fr;
+    
+    /* Определяем расположение блоков по именам */
+    grid-template-areas: 
+        "info form"
+        "map map";
+    
+    gap: 30px; /* Отступ между блоками */
+    align-items: flex-start;
+    padding: 0 20px;
+}
+
+/* Назначаем области Grid Area: */
+.contact_info {
+    grid-area: info; 
+    text-align: left;
+    padding: 0 20px;
+    color: var(--color-black);
+}
+
+.contact_form {
+    grid-area: form;
+    /* Оставляем только назначение области, все остальные стили удалены */
+}
+
+.section_map {
+    grid-area: map; /* Карта занимает обе колонки в нижнем ряду */
+    padding: 5px;
+    margin-top: 15px;
+}
+
+
+
+
+
+/* ================================================= */
+/* 5. СТИЛИ КОНТАКТНОЙ ФОРМЫ (contact_form) */
+/* ================================================= */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    /* background-color: #f8f8f8; светлый фон для контраста */
+    background-color: var(--color-lightblue);
+    
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    padding: 10px 20px;
+}
+
+
+.contact-form label {
+    font-size: 17px;
+    color: var(--color-black);
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    font-size: 16px;
+    padding: 5px 15px;
+    margin-bottom: 3px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* УНИФИКАЦИЯ ФОКУСА (как в личном кабинете) */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--color-blue);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Единый Box Shadow */
+    background-color: #f7f9fc; /* Легкий фон */
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* Стиль кнопки [ОТОСЛАТЬ] */
+.btn_common-blue{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0 0 0;
+    /* align-self: flex-start; Прижать к левому краю формы */
+    background-color: var(--color-btn_blue);
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 28px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.btn_common-blue:hover {
+    transform: translateY(-2px);
+    background-color: var(--color-btn_blue-hover);
+}
+
+
+
+
+/* ================================================= */
+/* МИНИМАЛЬНАЯ АДАПТИВНОСТЬ (для мобильных) */
+/* ================================================= */
+@media (max-width: 992px) {
+    .grid {
+        /* При ширине < 992px, макет становится 1-колончатым */
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "info"
+            "form"
+            "map"; 
+        gap: 30px;
+    }
+}
+
+
+
+/* --- ВТОРОСТЕПЕННЫЕ СТИЛИ --- */
+.blue_bold {
+    color: var(--color-blue);
+    font-weight: 900;
+}
+
+.green_bold {
+    color: var(--color-green);
+    font-weight: 900;
+}
+.red_bold {
+    color: var(--color-red);
+    font-weight: 900;
 }
