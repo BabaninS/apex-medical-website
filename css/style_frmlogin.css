@@ -132,7 +132,7 @@ h1 {
 }
 
 .login-form .group .input, 
-.login-form .group .button {
+.login-form .group .submitBtn {
     width: 95%; /* Уменьшено до 95% для отступов */
     color: #ffffff;
     padding: 10px;
@@ -149,17 +149,23 @@ h1 {
     color: white;
 }
 
+
+
 /* КНОПКА SUBMIT */
-.login-form .group .button {
+.login-form .group .submitBtn {
     background: var(--color-golden-rod);
     cursor: pointer;
     font-weight: 700;
     margin-top: 30px;
     width: 100%; /* Расширен до 100% для полной ширины контейнера (если padding не мешает) */
 }
-.login-form .group .button:hover {
-    background: #c49b63;
+.login-form .group .submitBtn:hover {
+    background-color: #c4ad63;
 }
+
+
+
+
 
 /* ЧЕКБОКС "ЗАПОМНИТЬ МЕНЯ" */
 .login-form .group .check {
@@ -246,5 +252,5 @@ h1 {
     transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 .btn_common-blue:hover {
-    background-color: var(--color-golden-rod);
+    background-color: var(--color-btn_blue-hover);
 }

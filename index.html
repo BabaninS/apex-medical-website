@@ -39,10 +39,21 @@
               <a class="visibility" href="clientaccount.html" id="clientaccount">Osobní účet</a> 
             </nav>
             
-                    <!-- Аватарка для Log in -->
-                    <a href="frmLogin.html">
-                      <img class="user-login" src="./images/avatar.png" alt="Log in">
+                    <!-- АВАТАРКА Log in - DROPDOWN -->
+                    <div class="user-dropdown">
+                    <a href="frmLogin.html" class="dropdown-trigger">
+                        <img class="user-login" src="./images/avatar.png" alt="Log in">
                     </a>
+                    
+                    <div class="dropdown-content">
+                      <p class="sz16">
+                        Přihlaste se do svého osobního účtu nebo se zaregistrujte a objednejte se k lékaři.
+                      </p>
+                        <a href="frmLogin.html" class="dropdown-btn-login">Přihlásit se</a>
+                        <!-- <p>Potřebujete se přihlásit?</p>  -->
+                        <a href="frmRegister.html" class="dropdown-btn-register">Registrovat se</a>
+                    </div>
+                  </div>
             
           </div> <!-- header_top-inner -->
         </div> <!-- container -->
@@ -91,7 +102,6 @@
       
         <div class="right_side">
           <img src="images/banner1.jpg" alt="APEX Medical Center" height=340 title="APEX Medical Center" class="banner">
-          <!-- <img src="images/_pic1.png" alt="APEX office" height="500" width=550 title="Head office"> -->
         </div> <!--right_side-->
       </div>  <!--body_top-->
     </div> <!--section_top-->

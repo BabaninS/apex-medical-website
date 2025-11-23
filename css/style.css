@@ -96,8 +96,6 @@ h1 {
     height: 50px;
     margin-bottom: 0px;
 }
-/* ------------------ */
-
 
 
 
@@ -518,4 +516,150 @@ select:focus{
 .show-more-button-container {
     margin: 15px auto 15px;
     text-align: center;
+}
+
+
+
+
+
+
+/* ==================================== */
+/* СТИЛИ ДЛЯ ТУЛТИПА АВАТАРКИ - TOOLTIP */
+/* ==================================== */
+
+/* 1. Контейнер: для относительного позиционирования */
+.user-tooltip-container {
+    position: relative;
+    display: inline-block; /* Чтобы контейнер не занимал всю ширину */
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* 2. Стили для самого текста подсказки */
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    
+    /* Внешний вид тултипа остается прежним */
+    width: 180px; /* Немного увеличим ширину */
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+
+
+    /* Позиционирование: появляется СНИЗУ от иконки */
+    position: absolute;
+    z-index: 1;
+    top: 150%; /* Сдвиг вниз: 100% от высоты иконки + дополнительный отступ */
+    right: 0; /* Выравниваем тултип по правому краю иконки */
+    /* transform: translateY(-50%); Точная вертикальная центровка */
+    
+    /* Плавный переход */
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* 3. Добавление маленького "треугольника" (стрелки) сверху */
+.tooltip-text::before {
+    content: "";
+    position: absolute;
+    z-index: 2; /* Поверх остальных элементов тултипа */
+    
+    bottom: 100%; /* Позиционируем стрелку вверху тултипа */
+    right: 15px; /* Выравниваем по правому краю (отступ от края) */
+    
+    border-width: 5px;
+    border-style: solid;
+    /* Направляем стрелку вверх: прозрачные бока, цветная нижняя граница */
+    border-color: transparent transparent #555 transparent;
+}
+
+/* 4. Отображение тултипа при наведении на контейнер */
+.user-tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
+/* ================================== */
+/* СТИЛИ ДЛЯ ВЫПАДАЮЩЕГО МЕНЮ АВАТАРКИ - DROPDOWN */
+/* ================================== */
+
+/* Основной контейнер, который позволяет позиционировать меню относительно него */
+.user-dropdown {
+    position: relative; /* Обязательно для правильного позиционирования дочернего элемента */
+    display: inline-block;
+    cursor: pointer;
+    /* Устанавливаем z-index, чтобы меню было поверх других элементов */
+    z-index: 1000; 
+}
+
+/* Стили для самого выпадающего окна */
+.dropdown-content {
+    /* Изначально скрываем меню */
+    visibility: hidden; 
+    opacity: 0;
+    
+    /* Позиционирование: появляется справа от иконки */
+    position: absolute;
+    top: 100%; /* Начинается ниже иконки */
+    right: 0; 
+    
+    min-width: 200px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    
+    /* Плавный переход для видимости и прозрачности */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Заголовок (параграф) внутри меню */
+.dropdown-content p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+/* Стили для кнопок внутри меню */
+.dropdown-content a {
+    display: block;
+    text-align: center;
+    padding: 8px 15px;
+    margin-top: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-btn-login {
+    background-color: var(--color-btn_blue);
+    color: white;
+}
+.dropdown-btn-login:hover {
+    background-color: var(--color-btn_blue-hover);
+}
+
+.dropdown-btn-register {
+    background-color: #f0f0f0;
+    color: var(--color-black, #333);
+    border: 1px solid #ddd;
+}
+.dropdown-btn-register:hover {
+    background-color: #d0d0d0;
+}
+
+/* СДЕЛАЕМ МЕНЮ ВИДИМЫМ ПРИ НАВЕДЕНИИ НА ОСНОВНОЙ КОНТЕЙНЕР */
+.user-dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
 }
