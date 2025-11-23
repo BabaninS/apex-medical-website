@@ -77,12 +77,10 @@ h1 {
 }
 .features span {
     color: var(--color-btn_blue); 
-    /* color: var(--color-golden-rod); не рекомендуется*/ 
     font-weight: 700;
 }
 .feature-box {
     text-align: center;
-    /* border: 3px solid var(--color-golden-rod); */
     background: rgba(0,128,255,0.17);
     background-color: transparent;
 }
@@ -102,6 +100,10 @@ h1 {
 
 
 
+
+
+
+/* СТИЛИ РАЗДЕЛА "ABOUT_CONTENT" */
 .content_list-grid{
     display: grid;
     grid-template-columns: repeat(3, 3fr);
@@ -113,10 +115,6 @@ h1 {
     padding: 0px 0px;
 }
 
-
-
-
-/* СТИЛИ РАЗДЕЛА "ABOUT_CONTENT" */
 .about_content{
     max-width: 800px;
     margin: 0 auto 40px auto;
@@ -144,6 +142,7 @@ h1 {
     /* Более выраженная тень при наведении */
     box-shadow: 0 8px 25px rgba(0, 128, 255, 0.15);
 }
+
 
 /* VOID ??? */
 /* .about_content-title { 
@@ -410,18 +409,6 @@ select:focus{
 
 
 
-.content_list_grid{
-    display: grid;
-    grid-template-columns: repeat(3, 3fr);
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    max-width:1000px; 
-    margin: 0 auto;
-    padding: 0px 0px;
-    /* margin-top: 5px;  */
-}
-
 
 
 /* ------------------------------- */
@@ -448,9 +435,12 @@ select:focus{
     font-size: 22px;
     text-align: center;
 }
+
+
 .section_top_title_text {
-font-size: 20px;
-text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
 }
 /* -------------------------- */
 

@@ -1,3 +1,19 @@
+
+.content_list-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    max-width:1000px; 
+    margin: 0 auto;
+    padding: 0px 0px;
+}
+
+
+
+
+
 /* 1. Скрытие второго ряда по умолчанию */
 .doctors-hidden-row {
     display: none; /* 2-й ряд не показывать изначально */

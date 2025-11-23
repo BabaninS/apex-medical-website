@@ -68,8 +68,8 @@
 .header_user {
     margin:20px;
 }
-.header_user-avatar {
-    /* aspect-ratio: 1/1; */
+.user-login {
+    margin:20px;
     width: 22px;
     height: 22px;
     margin: 10px auto 4px;
