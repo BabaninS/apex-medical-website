@@ -1,13 +1,3 @@
-:root{
-    --color-bg: #cce2f7;
-    --color-site-bg: #cce2f7;
-    --color-black: #333;
-    --color-white: whitesmoke;
-    --color-blue: #007bff;
-    --color-blue-light: #85c1ff;
-    --color-text-gray: #666; /* Добавим для удобства */
-}
-
 html, body {
     font-family: 'arial', sans-serif;
     background-color: var(--color-white);
@@ -93,60 +83,57 @@ h2 {
 
 
 /* ================================================= */
-/*     СТИЛИ КАРТОЧЕК (.about_content-item) */
+/*     СТИЛИ КАРТОЧЕК (.card-item) */
 /* ================================================= */
 
-.about_content-item {
+.card-item {
     display: flex;
     flex-direction: column;
     text-align: center;
-    
-    padding: 20px; /* Общий padding */
+    padding: 20px;
     min-height: 140px; 
-
     /* Внешний вид */
-    border: 1px solid var(--color-blue-light);
-    border-radius: 8px;
-    background-color: #f7f9fc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    
+    border: 3px solid var(--color-blue-ligh);
+    border-radius: 15px;
+    background-color: ghostwhite;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     /* Интерактивность */
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
     cursor: pointer;
 }
 
-/* СТИЛЬ ПРИ НАВЕДЕНИИ (HOVER) - ИСПРАВЛЕННЫЙ */
-.about_content-item:hover {
+.card-item:hover {
     transform: translateY(-2px); /* Слегка поднимаем */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    border-color: var(--color-blue);
-    
-    /* ЗАМЕНА ЖЕЛТОГО ЦВЕТА НА СВЕТЛО-ГОЛУБОЙ */
-    background-color: var(--color-blue-light); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    /* border-color: var(--color-black); */
+    /* background-color: rgb(247, 247, 199);  */
 }
 
+
+
+
 /* ВНУТРЕННИЕ ЭЛЕМЕНТЫ КАРТОЧКИ */
-.about_content-item .icon {
+.card-item .icon {
     width: 35px; /* Увеличим размер иконки, если вы планируете их использовать */
     height: 35px;
     margin: 0 auto 10px; /* Центрируем иконку */
 }
 
-.about_content-item-title {
+.card-item-title {
     font-size: 18px;
     font-weight: 700;
     color: var(--color-blue-light);
     margin: 0;
 }
 /* Перекрытие стилей для h3 внутри карточки, чтобы избежать конфликтов */
-.about_content-item h3 {
+.card-item h3 {
     margin-top: 0;
     margin-bottom: 3px;
     font-size: 20px;
     color: var(--color-blue);
 }
 
-.about_content-item-text {
+.card-item-text {
     font-size: 14px;
     color: var(--color-text-gray);
     margin-top: 5px;
@@ -166,22 +153,24 @@ h2 {
     display: block;
 }
 
+
+
 /* Визуальное выделение АКТИВНОЙ карточки слева */
-.account-tab-link.active {
+.card-tab-link.active {
     background-color: var(--color-blue);
     color: white;
     transform: none; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     border-color: var(--color-blue); /* Активная рамка */
 }
 
 /* Изменяем цвет текста и иконки внутри АКТИВНОЙ карточки */
-.account-tab-link.active .about_content-item-title,
-.account-tab-link.active .about_content-item-text {
+.card-tab-link.active .card-item-title,
+.card-tab-link.active .card-item-text {
     color: white;
 }
 /* Сброс эффекта hover для активной вкладки, чтобы не было конфликтов */
-.account-tab-link.active:hover {
+.card-tab-link.active:hover {
     background-color: var(--color-blue);
 }
 
@@ -546,5 +535,3 @@ h2 {
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Легкое синее свечение */
     background-color: #f7f9fc; 
 }
-
-/* just my comments */

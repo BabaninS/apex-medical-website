@@ -18,11 +18,12 @@
         <div class="container">
           <div class="header_top-inner">
             <a class="header-logo" href="index.html">
-              <div><img class="company_logo" src="images/logo.png" alt="logo">
+              <div>
+                <img class="company_logo" src="images/logo.png" alt="logo">
               </div> 
               <div class="header_logo-text">
-                <div class="logo-title sz20">APEX</div>
-                <div class="logo-title sz16">Medical</div>
+                <div class="sz20">APEX</div>
+                <div class="sz16">Medical</div>
               </div>
             </a>
 
@@ -33,14 +34,35 @@
               <a href="sluzby.html">Naše služby</a> 
               <a class="active" href="#" >О nás</a> 
               <a href="contacts.html">Kontakty</a> 
-              <a class="visibility" href="clientaccount.html" id="clientaccount">Osobní účet</a> 
+              <!-- <a class="hidden-item" href="clientaccount.html" id="personalAccountLink">Osobní účet</a>               -->
             </nav>
             
-                    <!-- Аватарка для Log in -->
-                    <a href="frmLogin.html">
-                      <img class="user-login" src="./images/avatar.png" alt="Log in">
-                    </a>
-            
+                    <!-- АВАТАРКА Log in - DROPDOWN -->
+                    <div class="user-dropdown">
+                              <a href="frmLogin.html" class="dropdown-trigger">
+                                  <img class="user-login" src="./images/avatar.png" alt="Log in">
+                              </a>
+
+                              <div class="dropdown-content">
+                                  
+                                  <div id="guest-content">
+                                      <p class="sz16">
+                                          Přihlaste se do svého osobního účtu nebo se zaregistrujte a objednejte se k lékaři.
+                                      </p>
+                                      <a href="frmLogin.html" class="dropdown-btn-login">Přihlásit se</a>
+                                      <a href="frmRegister.html" class="dropdown-btn-register">Registrovat se</a>
+                                  </div>
+
+                                  <div id="auth-content" class="hidden-item"> 
+                                      <p id="user-greeting">
+                                          Vítejte, uživateli!
+                                      </p>
+                                      <a href="clientaccount.html" class="dropdown-btn-login">Můj účet</a> 
+                                      <a href="#" class="dropdown-btn-register" id="logout-button">Odhlásit se</a>
+                                  </div>
+                                  
+                              </div>
+                          </div>
           </div> <!-- header_top-inner -->
         </div> <!-- container -->
       </div> <!-- header_top -->

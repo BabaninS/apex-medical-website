@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='images/favicon.png' rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" href="css/vars.css">
   <link rel="stylesheet" href="css/header-footer.css">
   <link rel="stylesheet" href="css/sizes.css">
   <link rel="stylesheet" href="css/clientaccount.css">
-  <link rel="stylesheet" href="css/vars.css">
 
 
   <title>APEX Medical</title>
@@ -21,11 +21,12 @@
         <div class="container">
           <div class="header_top-inner">
             <a class="header-logo" href="index.html">
-              <div><img class="company_logo" src="images/logo.png" alt="logo">
+              <div>
+                <img class="company_logo" src="images/logo.png" alt="logo">
               </div> 
               <div class="header_logo-text">
-                <div class="logo-title sz20">APEX</div>
-                <div class="logo-title sz16">Medical</div>
+                <div class="sz20">APEX</div>
+                <div class="sz16">Medical</div>
               </div>
             </a>
 
@@ -36,14 +37,35 @@
               <a href="sluzby.html">Naše služby</a> 
               <a href="about.html" >О nás</a> 
               <a href="contacts.html">Kontakty</a> 
-              <a class="visibility active" href="#" id="clientaccount">Osobní účet</a> 
+              <a class="active hidden-item" href="#" id="personalAccountLink">Osobní účet</a>              
             </nav>
             
-                    <!-- Аватарка для Log in -->
-                    <a href="frmLogin.html">
-                      <img class="user-login" src="./images/avatar.png" alt="Log in">
-                    </a>
-            
+                    <!-- АВАТАРКА Log in - DROPDOWN -->
+                    <div class="user-dropdown">
+                              <a href="frmLogin.html" class="dropdown-trigger">
+                                  <img class="user-login" src="./images/avatar.png" alt="Log in">
+                              </a>
+
+                              <div class="dropdown-content">
+                                  
+                                  <div id="guest-content">
+                                      <p class="sz16">
+                                          Přihlaste se do svého osobního účtu nebo se zaregistrujte a objednejte se k lékaři.
+                                      </p>
+                                      <a href="frmLogin.html" class="dropdown-btn-login">Přihlásit se</a>
+                                      <a href="frmRegister.html" class="dropdown-btn-register">Registrovat se</a>
+                                  </div>
+
+                                  <div id="auth-content" class="hidden-item"> 
+                                      <p id="user-greeting">
+                                          Vítejte, uživateli!
+                                      </p>
+                                      <a href="clientaccount.html" class="dropdown-btn-login">Můj účet</a> 
+                                      <a href="#" class="dropdown-btn-register" id="logout-button">Odhlásit se</a>
+                                  </div>
+                                  
+                              </div>
+                          </div>
           </div> <!-- header_top-inner -->
         </div> <!-- container -->
       </div> <!-- header_top -->
@@ -60,19 +82,19 @@
       <!-- КАРТОЧКИ С ССЫЛКАМИ НА РАЗНЫЕ РАЗДЕЛЫ ЛИЧНОГО КАБИНЕТА -->
       <div class="left_side">
             <div class="content_list-grid"> 
-              <div class="about_content-item account-tab-link active" data-target="notes-content">
-                <h3 class="about_content-item-title">Moje poznámky</h3>
-                <p class="about_content-item-text">Harmonogram nadcházejících schůzek a historie návštěv lékařů.</p>
+              <div class="card-item card-tab-link active" data-target="notes-content">
+                <h3 class="card-item-title">Moje poznámky</h3>
+                <p class="card-item-text">Harmonogram nadcházejících schůzek a historie návštěv lékařů.</p>
               </div>
 
-              <div class="about_content-item account-tab-link" data-target="data-content">
-                <h3 class="about_content-item-title">Moje údaje</h3>
-                <p class="about_content-item-text">Zde si můžete prohlédnout a v případě potřeby změnit své osobní údaje a nastavení profilu..</p>
+              <div class="card-item card-tab-link" data-target="data-content">
+                <h3 class="card-item-title">Moje údaje</h3>
+                <p class="card-item-text">Zde si můžete prohlédnout a v případě potřeby změnit své osobní údaje a nastavení profilu..</p>
               </div>
               
-              <div class="about_content-item account-tab-link" data-target="admin-content">
-                <h3 class="about_content-item-title">Administrační panel</h3>
-                <p class="about_content-item-text">Správa rezervací, kalendář lékařů, přehled pacientů a nástroje pro správu obsahu webu.</p>
+              <div class="card-item card-tab-link" data-target="admin-content">
+                <h3 class="card-item-title">Administrační panel</h3>
+                <p class="card-item-text">Správa rezervací, kalendář lékařů, přehled pacientů a nástroje pro správu obsahu webu.</p>
               </div>
             </div> <!--content_list-grid-->        
         </div> <!--left_side-->

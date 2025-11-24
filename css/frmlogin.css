@@ -1,0 +1,139 @@
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.frmCommon h2 {
+    font-size: 28px; /* размер заголовка увеличен */
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+
+.center-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    min-height: calc(100vh - 200px); /* Вычислим высоту, чтобы форма была по центру */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.frmCommon {
+    min-width: 400px;
+    position: relative;
+    padding: 20px;
+    color: #fff; /* Белый текст для контраста */
+    text-align: center; /* Центрирование текста внутри формы */
+
+    background: gray;
+    border: 2px solid var(--color-golden-rod);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)    
+}
+
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.frmCommon input[type="email"],
+.frmCommon input[type="password"] {
+    width: calc(100% - 36px); /* Учитываем padding */
+    padding: 14px 18px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255,255,255,.1); /* Полупрозрачный фон */
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.frmCommon input[type="email"]::placeholder,
+.frmCommon input[type="password"]::placeholder {
+    color: rgba(255,255,255,.7); /* Цвет плейсхолдера */
+}
+
+.frmCommon input[type="email"]:focus,
+.frmCommon input[type="password"]:focus {
+    background: rgba(255,255,255,.15);
+    box-shadow: 0 0 8px rgba(255,255,255,0.4); /* Белая тень при фокусе */
+}
+
+
+.hr {
+    height: 2px;
+    margin: 30px 0px 10px;
+    background: rgba(255,255,255,.2);
+}
+.foot-lnk {
+    text-align: center;
+    margin-top: 20px;
+}
+.foot-lnk a {
+    color: #f6e5d3; /* цвет ссылки */
+    font-size: 16px;
+    display: inline-block;
+    margin: 5px 0;
+    cursor: pointer;
+    text-decoration: none; /* Убрал подчеркивание по умолчанию */
+}
+.foot-lnk a:hover {
+    text-decoration: underline; /* Добавил подчеркивание при наведении */
+}
+
+.message-text {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #f8d7da; /* Светло-красный для ошибок */
+    font-weight: bold;
+    display: none; /* Скрываем по умолчанию, показываем через JS */
+}
+.message-text.success {
+    color: #d4edda; /* Светло-зеленый для успеха */
+}
+
+
+
+
+
+/* ================================================= */
+/* 4. СТИЛИ КНОПКИ */
+/* ================================================= */
+
+.btn_common-blue{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 0 0;
+    width: 100%;
+    background-color: lightslategray;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 28px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.btn_common-blue:hover {
+    background-color: rgb(146, 164, 182);
+}
+
+
+
+/* Адаптивность для формы */
+@media (max-width: 480px) {
+    .frmCommon {
+        min-width: unset; /* Убираем минимальную ширину на маленьких экранах */
+        width: 100%;
+        padding: 25px;
+    }
+}

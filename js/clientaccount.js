@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const tabLinks = document.querySelectorAll('.account-tab-link');
+    const tabLinks = document.querySelectorAll('.card-tab-link');
     const tabContents = document.querySelectorAll('.account-tab-content');
 
     // Функция для переключения вкладок
